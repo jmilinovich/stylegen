@@ -38,9 +38,11 @@ class ImageGenerator:
         return results
 
     def generate_and_save_all_images(self):
+        output_dir = 'styles'
+        os.makedirs(output_dir, exist_ok=True)
         for style_name, style in self.styles.items():
             result_json = self.generate_images_for_style(style)
-            filename = f'{style_name}.json'
+            filename = os.path.join(output_dir, f'{style_name}.json')
             with open(filename, 'w') as file:
                 json.dump(result_json, file, indent=4)
 
