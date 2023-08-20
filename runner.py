@@ -2,6 +2,19 @@ import subprocess
 import webbrowser
 import os
 import sys
+import subprocess
+
+def install_requirements():
+    # Path to the requirements.txt file
+    requirements_path = 'requirements.txt'
+
+    # Run the pip install command
+    subprocess.check_call(['pip', 'install', '-r', requirements_path])
+
+# Call the function to install the dependencies
+print("Installing dependencies...")
+install_requirements()
+
 
 # Get the current Python executable
 python_executable = sys.executable

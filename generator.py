@@ -9,7 +9,7 @@ import replicate
 ##
 ##
 # for the quick start, uncomment the following line and add your API token
-# api_token = YOUR_REPLICATE_API_TOKEN
+# api_token = "YOUR_REPLICATE_API_TOKEN"
 os.environ['REPLICATE_API_TOKEN'] = api_token
 
 CONCEPTS = constants.CONCEPTS
