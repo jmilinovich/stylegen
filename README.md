@@ -22,7 +22,10 @@ To get started with StyleGen:
 3. Update constants.py with your desired styles and concepts
 4. Execute runner.py and enjoy the results
 
-## Defining your styles
+## Defining your concepts and styles
+
+-- `CONCEPTS` are the subject matter of your images. Concepts are entities such as "the golden gate bridge" or "an old man sitting on a subway bench".
+-- `STYLES` are visual treatments to represent a subject matter. Styles are things like "water color" or "cyberpunk".
 
 When you define your styles in constants.py, use the `[concept]` placeholder in the body of the prompt to make it clear where to interpolate the list of styles. Pick a representative name for your style, as this will be the name of the output json and html files.
 

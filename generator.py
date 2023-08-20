@@ -3,13 +3,14 @@ import os
 import json
 import replicate
 
-# 
-# for best practices, create a file keys.py and add your API token there and uncomment the following 2 lines
+# for best practice, create a file keys.py and add your API token there and uncomment the following 2 lines
 # import keys
-# os.environ["REPLICATE_API_TOKEN"] = keys.REPLICATE_API_TOKEN
-# 
+# api_token = keys.REPLICATE_API_TOKEN
+##
+##
 # for the quick start, uncomment the following line and add your API token
-# os.environ["REPLICATE_API_TOKEN"] = YOUR_REPLICATE_API_TOKEN
+# api_token = YOUR_REPLICATE_API_TOKEN
+os.environ['REPLICATE_API_TOKEN'] = api_token
 
 CONCEPTS = constants.CONCEPTS
 STYLES = constants.STYLES
