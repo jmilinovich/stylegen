@@ -1,19 +1,20 @@
 import subprocess
 import webbrowser
+import os
 import sys
 
 # Get the current Python executable
 python_executable = sys.executable
 
-# Running MAIN.PY
-print("Running MAIN.PY...")
-result_main = subprocess.run([python_executable, 'MAIN.PY'], stderr=subprocess.PIPE)
+# Running GENERATOR.PY
+print("Running GENERATOR.PY...")
+result_gen = subprocess.run([python_executable, 'GENERATOR.PY'], stderr=subprocess.PIPE)
 
-if result_main.returncode == 0:
-    print("MAIN.PY executed successfully!")
+if result_gen.returncode == 0:
+    print("GENERATOR.PY executed successfully!")
 else:
     print("Error in executing MAIN.PY:")
-    print(result_main.stderr.decode())
+    print(result_gen.stderr.decode())
     exit(1)
 
 # Running PAGEMAKER.PY
@@ -30,6 +31,7 @@ else:
 print("Both scripts executed successfully!")
 
 # Open the newly created index.html file in the default web browser
-index_file_path = 'pages/index.html'
-print(f"Opening {index_file_path} in the default web browser...")
-webbrowser.open(index_file_path)
+index_file_path = os.path.abspath('pages/index.html')
+index_url = f'file://{index_file_path}'
+print(f"Opening {index_url} in the default web browser...")
+webbrowser.open(index_url)
