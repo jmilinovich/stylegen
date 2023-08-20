@@ -9,10 +9,10 @@ StyleGen is a flexible python library for generating high quality prompts for st
 ## Overview
 
 There are four main files in this repo:
--- **constants.py**, which defines the list of styles and concepts to iterate through
--- **generator.py**, which generates images for all combinations of styles and concepts then stores the results in a json file
--- **pagemaker.py**, which generates html pages for each of the json payloads created in generator.py
--- **runner.py**, which runs generator.py then pagemaker and opens the resulting html in the browser
+- **constants.py**, which defines the list of styles and concepts to iterate through
+- **generator.py**, which generates images for all combinations of styles and concepts then stores the results in a json file
+- **pagemaker.py**, which generates html pages for each of the json payloads created in generator.py
+- **runner.py**, which runs generator.py then pagemaker and opens the resulting html in the browser
 
 ## Getting Started
 
@@ -25,8 +25,8 @@ To get started with StyleGen:
 
 ## Defining your concepts and styles
 
--- `CONCEPTS` are the subject matter of your images. Concepts are entities such as "the golden gate bridge" or "an old man sitting on a subway bench".
--- `STYLES` are visual treatments to represent a subject matter. Styles are things like "water color" or "cyberpunk".
+- `CONCEPTS` are the subject matter of your images. Concepts are entities such as "the golden gate bridge" or "an old man sitting on a subway bench".
+- `STYLES` are visual treatments to represent a subject matter. Styles are things like "water color" or "cyberpunk".
 
 When you define your styles in constants.py, use the `[concept]` placeholder in the body of the prompt to make it clear where to interpolate the list of styles. Pick a representative name for your style, as this will be the name of the output json and html files.
 
