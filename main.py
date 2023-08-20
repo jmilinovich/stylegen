@@ -33,6 +33,7 @@ class ImageGenerator:
             "CONCEPTS": []
         }
         for concept in self.concepts:
+            print(f"Generating image for concept: {concept}")
             result = self.generate_image(concept, style)
             results["CONCEPTS"].append(result)
         return results
@@ -41,6 +42,7 @@ class ImageGenerator:
         output_dir = 'styles'
         os.makedirs(output_dir, exist_ok=True)
         for style_name, style in self.styles.items():
+            print(f"Generating images for style: {style_name}")
             result_json = self.generate_images_for_style(style)
             filename = os.path.join(output_dir, f'{style_name}.json')
             with open(filename, 'w') as file:
