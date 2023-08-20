@@ -20,7 +20,8 @@ To get started with StyleGen:
 1. Clone this repo to your local environment
 2. Add your [Replicate API key](https://replicate.com/account/api-tokens) to the top of generator.py
 3. Update constants.py with your desired styles and concepts
-4. Execute runner.py and enjoy the results
+4. Execute runner.py, which will also install all dependencies from `requirements.txt` (ie, replicate)
+5. Enjoy the results and star this repo 😇
 
 ## Defining your concepts and styles
 
