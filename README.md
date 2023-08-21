@@ -8,11 +8,12 @@ StyleGen is a flexible python library for generating high quality prompts for st
 
 ## Overview
 
-There are four main files in this repo:
+There are 5 main files in this repo:
 - **constants.py**, which defines the list of styles and concepts to iterate through
 - **generator.py**, which generates images for all combinations of styles and concepts then stores the results in a json file
 - **pagemaker.py**, which generates html pages for each of the json payloads created in generator.py
 - **runner.py**, which runs generator.py then pagemaker and opens the resulting html in the browser
+- **gen_prompts.pt**, which can be used to generate a json file of prompts if the user would prefer not to use Replicate
 
 ## Getting Started
 
@@ -29,6 +30,12 @@ To get started with StyleGen:
 - `STYLES` are visual treatments to represent a subject matter. Styles are things like "water color" or "cyberpunk".
 
 When you define your styles in constants.py, use the `[concept]` placeholder in the body of the prompt to make it clear where to interpolate the list of styles. Pick a representative name for your style, as this will be the name of the output json and html files.
+
+## Generating prompts for use beyond Replicate
+
+If you would like to use another instance of Stable Diffusion XL instead of Replicate, you can still use stylegen to help you create your prompts. When running stylegen, simply pass the flag `--prompts_only` and stylegen will create a new file, `prompts.json`, which you can then use downstream for any image models.
+
+Example: `python3 stylegen.py --prompts_only`
 
 ## Feedback
 
