@@ -4,6 +4,19 @@ import os
 import sys
 import subprocess
 
+# Check if the flag --prompts_only is present in the command-line arguments
+if '--prompts_only' in sys.argv:
+    print("Running gen_prompts.py...")
+    result_gen_prompts = subprocess.run([sys.executable, 'gen_prompts.py'], stderr=subprocess.PIPE)
+    
+    if result_gen_prompts.returncode == 0:
+        print("gen_prompts.py executed successfully!")
+    else:
+        print("Error in executing gen_prompts.py:")
+        print(result_gen_prompts.stderr.decode())
+        exit(1)
+    exit(0) # Exit the script after running gen_prompts.py
+
 def install_requirements():
     # Path to the requirements.txt file
     requirements_path = 'requirements.txt'
