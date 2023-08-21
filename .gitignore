@@ -159,3 +159,5 @@ styles/
 pages/
 *.json
 *.html
+
+prompts.txt
